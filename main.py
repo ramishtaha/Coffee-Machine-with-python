@@ -8,7 +8,7 @@ def main():
     choose_action()
         
 def choose_action():
-    action = input("Write action (buy, fill, take, remaining, exit):\n")
+    action = input("What you want me to do (buy, fill, take, remaining, exit):\n")
     if action == "take":
         take()
     elif action == "buy":
@@ -17,8 +17,11 @@ def choose_action():
         fill()
     elif action == "remaining":
         remaining()
-    else:
+    elif action == "exit":
         exit()
+    else:
+        print("Please Enter (buy, fill, take, remaining, exit)\n")
+        choose_action()
     
 
 def check_resources(water, milk, coffee):
